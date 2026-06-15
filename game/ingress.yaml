@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: game
+  namespace: testing
+  labels:
+    name: game
+spec:
+  rules:
+  - host: game.localhost
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: game
+            port: 
+              number: 80
