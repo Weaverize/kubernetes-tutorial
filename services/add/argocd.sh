@@ -3,7 +3,7 @@ set -
 
 kind export kubeconfig
 
-helm upgrade --install --wait --timeout 15m --atomic --namespace argocd --create-namespace \
+helm upgrade --install --wait --timeout 15m --rollback-on-failure --namespace argocd --create-namespace \
   --repo https://argoproj.github.io/argo-helm argocd argo-cd --values - <<EOF
 crds:
   install: true
