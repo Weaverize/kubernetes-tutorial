@@ -1,3 +1,5 @@
+# Chart URL: https://prometheus-community.github.io/helm-charts
+
 grafana:
   enabled: true
   admin:
