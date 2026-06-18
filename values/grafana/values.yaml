@@ -1,0 +1,17 @@
+grafana:
+  enabled: true
+  admin:
+    existingSecret: monitoring-grafana
+    userKey: admin-user
+    passwordKey: admin-password
+
+  persistence:
+    enabled: true
+    storageClassName: standard-rwo
+    size: 1Gi
+
+  ingress:
+    enabled: true
+    ingressClassName: nginx-internal
+    hosts:
+      - grafana.localhost
